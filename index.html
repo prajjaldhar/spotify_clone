@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://static.vecteezy.com/system/resources/previews/018/930/750/original/spotify-app-logo-spotify-icon-transparent-free-png.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Spotify</title>
+  </head>
+  <body class="bg-black pb-20 flex flex-col">
+    <!-- Navbar -->
+    <div class="flex flex-1 gap-2">
+      <div class="w-82">
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/018/930/750/original/spotify-app-logo-spotify-icon-transparent-free-png.png"
+          alt="spotify.png"
+          class="size-15 ml-2"
+        />
+      </div>
+      <div class="flex flex-1 justify-center items-center gap-7">
+        <!-- home -->
+        <span
+          class="bg-[#121212] w-10 h-10 flex justify-center items-center rounded-full"
+        >
+          <i class="fas fa-home text-xl text-white"></i
+        ></span>
+        <!-- search -->
+
+        <span
+          class="bg-[#121212] rounded-2xl hover:scale-105 w-80 h-11 mt-1 rounded-3xl text-white flex justify-center items-center gap-5"
+        >
+          <i class="fas fa-search ml-3"></i
+          ><input
+            class="w-80 border-none focus:outline-none focus:ring-0"
+            type="text"
+            placeholder="What do you want to play?"
+          /><i class="far fa-folder-open mr-3"></i>
+        </span>
+      </div>
+      <div class="flex justify-center items-center gap-10">
+        <div class="flex gap-3 w-full">
+          <!-- explore -->
+          <span
+            ><button
+              class="bg-white text-black px-2 py-2 rounded active:bg-white rounded-2xl text-sm hover:scale-105"
+            >
+              <b>Explore Premium</b>
+            </button></span
+          >
+          <!-- install -->
+          <span
+            class="bg-[#121212] text-white px-2 py-2 rounded active:bg-white rounded-2xl text-sm"
+            ><i
+              class="fas fa-arrow-alt-circle-down text-white w-5 hover:scale-105"
+            ></i
+            ><button>Install App</button></span
+          >
+        </div>
+        <span><i class="far fa-bell text-white hover:scale-105"></i></span>
+        <span><i class="fas fa-users text-white hover:scale-105"></i></span>
+        <span
+          ><button
+            class="h-10 w-10 rounded-full bg-green-500 flex justify-center items-center shadow-lg shadow-[#121212] border-5 border-slate-500 hover:scale-105"
+          >
+            <b class="text-white">P</b>
+          </button></span
+        >
+      </div>
+    </div>
+
+    <div class="flex flex-1 p-2 gap-2">
+      <!-- Left side 1 -->
+      <div class="rounded-xl bg-[#121212] flex flex-col">
+        <div class="flex flex-col">
+          <div class="h-14 flex p-3 mt-3 justify-evenly gap-4">
+            <h2 class="flex-1 text-white font-bold">Your Library</h2>
+            <div
+              class="bg-[#2a2a2a] flex-1 -mt-2 p-2 w-22 rounded-full text-center"
+            >
+              <i class="fa fa-plus text-white mr-2" aria-hidden="true"></i>
+              <button class="text-white font-bold">Create</button>
+            </div>
+            <div>
+              <i
+                class="flex-1 fa-solid fa-up-right-and-down-left-from-center text-white hover:bg-[#2a2a2a] rounded-full hover:p-3 -mt-2 hover:cursor-pointer"
+                aria-hidden="true"
+              ></i>
+            </div>
+          </div>
+          <div class="flex p-3 gap-2">
+            <div class="bg-[#2a2a2a] -mt-2 p-2 w-20 rounded-full">
+              <button class="text-white text-sm font-bold ml-2">
+                Playlist
+              </button>
+            </div>
+            <div class="bg-[#2a2a2a] -mt-2 p-2 w-20 rounded-full">
+              <button class="text-white text-sm font-bold ml-2">Artist</button>
+            </div>
+          </div>
+          <div class="flex text-white justify-between p-4">
+            <div>
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </div>
+            <div>
+              Recents
+              <i class="fa fa-list" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-96 rounded-xl bg-[#121212] p-4 text-white space-y-6 h-[80vh] overflow-y-auto"
+        >
+          <!-- Liked Songs -->
+          <div
+            class="flex items-center gap-4 hover:bg-[#2a2a2a] p-2 rounded-lg cursor-pointer"
+          >
+            <img
+              src="https://misc.scdn.co/liked-songs/liked-songs-300.png"
+              alt="Liked Songs"
+              class="w-12 h-12 rounded-md"
+            />
+            <div>
+              <h4 class="font-bold">Liked Songs</h4>
+              <p class="text-sm text-gray-400">Playlist • 1 song</p>
+            </div>
+          </div>
+
+          <!-- Artists List -->
+          <div class="space-y-3">
+            <!-- Artist Card -->
+            <div
+              class="flex items-center gap-4 hover:bg-[#2a2a2a] p-2 rounded-lg cursor-pointer"
+            >
+              <img
+                src="https://i.scdn.co/image/ab6761610000101fcb6926f44f620555ba444fca"
+                alt="Pritam"
+                class="w-12 h-12 rounded-full"
+              />
+              <div>
+                <h4 class="font-semibold">Pritam</h4>
+                <p class="text-sm text-gray-400">Artist</p>
+              </div>
+            </div>
+
+            <div
+              class="flex items-center gap-4 hover:bg-[#2a2a2a] p-2 rounded-lg cursor-pointer"
+            >
+              <img
+                src="https://i.scdn.co/image/ab6761610000101fc1559c29cb61d249075a8b86"
+                alt="Amaal Mallik"
+                class="w-12 h-12 rounded-full"
+              />
+              <div>
+                <h4 class="font-semibold">Amaal Mallik</h4>
+                <p class="text-sm text-gray-400">Artist</p>
+              </div>
+            </div>
+
+            <div
+              class="flex items-center gap-4 hover:bg-[#2a2a2a] p-2 rounded-lg cursor-pointer"
+            >
+              <img
+                src="https://i.scdn.co/image/ab6761610000e5eb0608ee2e47f6f470211831b9"
+                alt="Palak Muchhal"
+                class="w-12 h-12 rounded-full"
+              />
+              <div>
+                <h4 class="font-semibold">Palak Muchhal</h4>
+                <p class="text-sm text-gray-400">Artist</p>
+              </div>
+            </div>
+
+            <div
+              class="flex items-center gap-4 hover:bg-[#2a2a2a] p-2 rounded-lg cursor-pointer"
+            >
+              <img
+                src="https://i.scdn.co/image/ab6761610000101fac45eaf028dc58810df0f382"
+                alt="Rahat Fateh Ali Khan"
+                class="w-12 h-12 rounded-full"
+              />
+              <div>
+                <h4 class="font-semibold">Rahat Fateh Ali Khan</h4>
+                <p class="text-sm text-gray-400">Artist</p>
+              </div>
+            </div>
+
+            <div
+              class="flex items-center gap-4 hover:bg-[#2a2a2a] p-2 rounded-lg cursor-pointer"
+            >
+              <img
+                src="https://i.scdn.co/image/ab6761610000101fada368118a052fb40d3f1a68"
+                alt="Shilpa Rao"
+                class="w-12 h-12 rounded-full"
+              />
+              <div>
+                <h4 class="font-semibold">Shilpa Rao</h4>
+                <p class="text-sm text-gray-400">Artist</p>
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-4 hover:bg-[#2a2a2a] p-2 rounded-lg cursor-pointer"
+            >
+              <img
+                src="https://i.scdn.co/image/ab6761610000e5eb0608ee2e47f6f470211831b9"
+                alt="Shilpa Rao"
+                class="w-12 h-12 rounded-full"
+              />
+              <div>
+                <h4 class="font-semibold">Shilpa Rao</h4>
+                <p class="text-sm text-gray-400">Artist</p>
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-4 hover:bg-[#2a2a2a] p-2 rounded-lg cursor-pointer"
+            >
+              <img
+                src="https://i.scdn.co/image/ab6761610000e5eb0608ee2e47f6f470211831b9"
+                alt="Shilpa Rao"
+                class="w-12 h-12 rounded-full"
+              />
+              <div>
+                <h4 class="font-semibold">Shilpa Rao</h4>
+                <p class="text-sm text-gray-400">Artist</p>
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-4 hover:bg-[#2a2a2a] p-2 rounded-lg cursor-pointer"
+            >
+              <img
+                src="https://i.scdn.co/image/ab6761610000e5eb0608ee2e47f6f470211831b9"
+                alt="Shilpa Rao"
+                class="w-12 h-12 rounded-full"
+              />
+              <div>
+                <h4 class="font-semibold">Shilpa Rao</h4>
+                <p class="text-sm text-gray-400">Artist</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- main side -->
+
+      <div class="w-190 rounded-xl bg-[#121212]">
+        <div class="w-190 rounded-xl bg-[#121212] text-white p-4 space-y-6">
+          <!-- Top Filters -->
+          <div class="flex gap-4">
+            <button
+              class="bg-white text-black px-4 py-1 rounded-full font-bold"
+            >
+              All
+            </button>
+            <button class="bg-[#2a2a2a] px-4 py-1 rounded-full">Music</button>
+            <button class="bg-[#2a2a2a] px-4 py-1 rounded-full">
+              Podcasts
+            </button>
+          </div>
+
+          <!-- Artist/Album Grid -->
+          <div class="h-[90vh] overflow-y-auto">
+            <div class="grid grid-cols-4 gap-4 mr-3">
+              <!-- Card: Rekha -->
+              <div
+                class="group bg-[#2a2a2a] hover:bg-gray-700 hover:cursor-pointer rounded-lg flex items-center justify-between h-14 relative"
+              >
+                <div class="flex items-center gap-2">
+                  <img
+                    src="https://i.scdn.co/image/ab6761610000e5ebec5ce29757466bc61716b06b"
+                    class="w-12 h-14 rounded"
+                  />
+                  <div class="text-white truncate max-w-[100px]">Rekha</div>
+                </div>
+                <div
+                  class="opacity-0 group-hover:opacity-100 transition-opacity relative -left-2 duration-300"
+                >
+                  <div
+                    class="bg-green-500 w-8 h-8 rounded-full flex items-center justify-center shadow-lg"
+                  >
+                    <i
+                      class="fa fa-play text-black text-xs"
+                      aria-hidden="true"
+                    ></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card: Deepika -->
+              <div
+                class="group bg-[#2a2a2a] hover:bg-gray-700 hover:cursor-pointer rounded-lg flex items-center justify-between h-14 relative"
+              >
+                <div class="flex items-center gap-2">
+                  <img
+                    src="https://i.scdn.co/image/ab6761610000e5ebec5ce29757466bc61716b06b"
+                    class="w-12 h-14 rounded"
+                  />
+                  <div class="text-white truncate max-w-[100px]">Deepika</div>
+                </div>
+                <div
+                  class="opacity-0 group-hover:opacity-100 transition-opacity relative -left-2 duration-300"
+                >
+                  <div
+                    class="bg-green-500 w-8 h-8 rounded-full flex items-center justify-center shadow-lg"
+                  >
+                    <i
+                      class="fa fa-play text-black text-xs"
+                      aria-hidden="true"
+                    ></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card: Salman Khan -->
+              <div
+                class="group bg-[#2a2a2a] hover:bg-gray-700 hover:cursor-pointer rounded-lg flex items-center justify-between h-14 relative"
+              >
+                <div class="flex items-center gap-2">
+                  <img
+                    src="https://i.scdn.co/image/ab6761610000e5ebec5ce29757466bc61716b06b"
+                    class="w-12 h-14 rounded"
+                  />
+                  <div class="text-white truncate max-w-[100px]">
+                    Salman Khan
+                  </div>
+                </div>
+                <div
+                  class="opacity-0 group-hover:opacity-100 transition-opacity relative -left-2 duration-300"
+                >
+                  <div
+                    class="bg-green-500 w-8 h-8 rounded-full flex items-center justify-center shadow-lg"
+                  >
+                    <i
+                      class="fa fa-play text-black text-xs"
+                      aria-hidden="true"
+                    ></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card: Pritam -->
+              <div
+                class="group bg-[#2a2a2a] hover:bg-gray-700 hover:cursor-pointer rounded-lg flex items-center justify-between h-14 relative"
+              >
+                <div class="flex items-center gap-2">
+                  <img
+                    src="https://i.scdn.co/image/ab6761610000e5ebec5ce29757466bc61716b06b"
+                    class="w-12 h-14 rounded"
+                  />
+                  <div class="text-white truncate max-w-[100px]">Pritam</div>
+                </div>
+                <div
+                  class="opacity-0 group-hover:opacity-100 transition-opacity relative -left-2 duration-300"
+                >
+                  <div
+                    class="bg-green-500 w-8 h-8 rounded-full flex items-center justify-center shadow-lg"
+                  >
+                    <i
+                      class="fa fa-play text-black text-xs"
+                      aria-hidden="true"
+                    ></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card: KK -->
+              <div
+                class="group bg-[#2a2a2a] hover:bg-gray-700 hover:cursor-pointer rounded-lg flex items-center justify-between h-14 relative"
+              >
+                <div class="flex items-center gap-2">
+                  <img
+                    src="https://i.scdn.co/image/ab6761610000e5ebec5ce29757466bc61716b06b"
+                    class="w-12 h-14 rounded"
+                  />
+                  <div class="text-white truncate max-w-[100px]">KK</div>
+                </div>
+                <div
+                  class="opacity-0 group-hover:opacity-100 transition-opacity relative -left-2 duration-300"
+                >
+                  <div
+                    class="bg-green-500 w-8 h-8 rounded-full flex items-center justify-center shadow-lg"
+                  >
+                    <i
+                      class="fa fa-play text-black text-xs"
+                      aria-hidden="true"
+                    ></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- New Music Section -->
+            <div class="flex mt-8 justify-between items-center mr-3">
+              <h2 class="text-2xl font-bold">It's New Music Friday!</h2>
+              <button class="text-sm hover:underline">Show all</button>
+            </div>
+
+            <div class="grid grid-cols-4 gap-4">
+              <div
+                class="group hover:bg-[#181818] hover:cursor-pointer p-3 rounded-lg transition relative"
+              >
+                <!-- Image with Play Button -->
+                <div class="relative">
+                  <img
+                    src="https://i.scdn.co/image/ab67616d00001e020b9cb672be380559d195047e"
+                    class="rounded mb-2"
+                  />
+                  <!-- Play Button Overlay (hidden by default) -->
+                  <div
+                    class="absolute bottom-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  >
+                    <div
+                      class="bg-green-500 w-10 h-10 rounded-full flex items-center justify-center shadow-lg"
+                    >
+                      <i class="fa fa-play text-black" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+                <!-- Title and Description -->
+                <h3 class="font-bold">New Music Friday India</h3>
+                <p class="text-sm text-gray-400">
+                  Handpicked fresh new international...
+                </p>
+              </div>
+              <div
+                class="group hover:bg-[#181818] hover:cursor-pointer p-3 rounded-lg transition relative"
+              >
+                <div class="relative">
+                  <img
+                    src="https://i.scdn.co/image/ab67616d00001e020b9cb672be380559d195047e"
+                    class="rounded mb-2"
+                  />
+                  <div
+                    class="absolute bottom-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  >
+                    <div
+                      class="bg-green-500 w-10 h-10 rounded-full flex items-center justify-center shadow-lg"
+                    >
+                      <i class="fa fa-play text-black" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="font-bold">Release Radar</h3>
+                <p class="text-sm text-gray-400">
+                  Catch all the latest music from artists you...
+                </p>
+              </div>
+              <div
+                class="group hover:bg-[#181818] hover:cursor-pointer p-3 rounded-lg transition relative"
+              >
+                <div class="relative">
+                  <img
+                    src="https://i.scdn.co/image/ab67616d00001e020b9cb672be380559d195047e"
+                    class="rounded mb-2"
+                  />
+                  <div
+                    class="absolute bottom-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  >
+                    <div
+                      class="bg-green-500 w-10 h-10 rounded-full flex items-center justify-center shadow-lg"
+                    >
+                      <i class="fa fa-play text-black" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="font-bold">Naya Indiestan</h3>
+                <p class="text-sm text-gray-400">
+                  Naye Indie gaano ka khazana, featuring...
+                </p>
+              </div>
+              <div
+                class="group hover:bg-[#181818] hover:cursor-pointer p-3 rounded-lg transition relative"
+              >
+                <div class="relative">
+                  <img
+                    src="https://i.scdn.co/image/ab67616d00001e020b9cb672be380559d195047e"
+                    class="rounded mb-2"
+                  />
+                  <div
+                    class="absolute bottom-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  >
+                    <div
+                      class="bg-green-500 w-10 h-10 rounded-full flex items-center justify-center shadow-lg"
+                    >
+                      <i class="fa fa-play text-black" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="font-bold">Naya Indiestan</h3>
+                <p class="text-sm text-gray-400">
+                  Naye Indie gaano ka khazana, featuring...
+                </p>
+              </div>
+              <!-- Add more cards similarly -->
+            </div>
+            <!-- Section 1 -->
+            <section class="mb-6 mr-3">
+              <div class="flex mt-8 justify-between items-center mb-4">
+                <div>
+                  <p class="text-sm text-gray-400">
+                    Playlists full of favorites, still going strong.
+                  </p>
+                  <h2 class="text-2xl font-bold mt-1">Throwback</h2>
+                </div>
+                <a href="#" class="text-sm text-gray-400 hover:underline"
+                  >Show all</a
+                >
+              </div>
+
+              <!-- Playlist Cards -->
+              <div class="flex space-x-4 overflow-x-auto">
+                <!-- Card 1 -->
+                <div
+                  class="w-44 bg-gray-800 rounded-lg p-2 hover:bg-gray-700 hover:cursor-pointer transition"
+                >
+                  <img
+                    class="rounded-md mb-2"
+                    src="https://i.scdn.co/image/ab67616d00001e0224464fde51a635b8f0d467d1"
+                    alt="90s Dance Bollywood"
+                  />
+                  <h3 class="text-sm font-semibold">90s Dance Bollywood</h3>
+                  <p class="text-xs text-gray-400 mt-1">
+                    Get jiggy with 90s 'dhinchak' beats....
+                  </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                  class="w-44 bg-gray-800 rounded-lg p-2 hover:bg-gray-700 transition"
+                >
+                  <img
+                    class="rounded-md mb-2"
+                    src="https://i.scdn.co/image/ab67616d00001e0224464fde51a635b8f0d467d1"
+                    alt="All Out Hindi 00s"
+                  />
+                  <h3 class="text-sm font-semibold">All Out Hindi 00s</h3>
+                  <p class="text-xs text-gray-400 mt-1">
+                    Bollywood songs that ruled hearts in the...
+                  </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                  class="w-44 bg-gray-800 rounded-lg p-2 hover:bg-gray-700 transition"
+                >
+                  <img
+                    class="rounded-md mb-2"
+                    src="https://i.scdn.co/image/ab67616d00001e0224464fde51a635b8f0d467d1"
+                    alt="00's Love Hits"
+                  />
+                  <h3 class="text-sm font-semibold">00's Love Hits</h3>
+                  <p class="text-xs text-gray-400 mt-1">
+                    Fall in love with 00's Bollywood like never...
+                  </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div
+                  class="w-44 bg-gray-800 rounded-lg p-2 hover:bg-gray-700 transition"
+                >
+                  <img
+                    class="rounded-md mb-2"
+                    src="https://i.scdn.co/image/ab67616d00001e0224464fde51a635b8f0d467d1"
+                    alt="All Out Hindi 90s"
+                  />
+                  <h3 class="text-sm font-semibold">All Out Hindi 90s</h3>
+                  <p class="text-xs text-gray-400 mt-1">
+                    K.K.K..Kiran to T.T.T..Tuffy, the...
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <!-- section 2 -->
+            <section class="mb-6 mr-3">
+              <div class="flex mt-8 justify-between items-center mb-4">
+                <div>
+                  <p class="text-sm text-gray-400">
+                    Playlists full of favorites, still going strong.
+                  </p>
+                  <h2 class="text-2xl font-bold mt-1">Throwback</h2>
+                </div>
+                <a href="#" class="text-sm text-gray-400 hover:underline"
+                  >Show all</a
+                >
+              </div>
+
+              <!-- Playlist Cards -->
+              <div class="flex space-x-4 overflow-x-auto">
+                <!-- Card 1 -->
+                <div
+                  class="w-44 bg-gray-800 rounded-lg p-2 hover:bg-gray-700 hover:cursor-pointer transition"
+                >
+                  <img
+                    class="rounded-md mb-2"
+                    src="https://i.scdn.co/image/ab67616d00001e0224464fde51a635b8f0d467d1"
+                    alt="90s Dance Bollywood"
+                  />
+                  <h3 class="text-sm font-semibold">90s Dance Bollywood</h3>
+                  <p class="text-xs text-gray-400 mt-1">
+                    Get jiggy with 90s 'dhinchak' beats....
+                  </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                  class="w-44 bg-gray-800 rounded-lg p-2 hover:bg-gray-700 transition"
+                >
+                  <img
+                    class="rounded-md mb-2"
+                    src="https://i.scdn.co/image/ab67616d00001e0224464fde51a635b8f0d467d1"
+                    alt="All Out Hindi 00s"
+                  />
+                  <h3 class="text-sm font-semibold">All Out Hindi 00s</h3>
+                  <p class="text-xs text-gray-400 mt-1">
+                    Bollywood songs that ruled hearts in the...
+                  </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                  class="w-44 bg-gray-800 rounded-lg p-2 hover:bg-gray-700 transition"
+                >
+                  <img
+                    class="rounded-md mb-2"
+                    src="https://i.scdn.co/image/ab67616d00001e0224464fde51a635b8f0d467d1"
+                    alt="00's Love Hits"
+                  />
+                  <h3 class="text-sm font-semibold">00's Love Hits</h3>
+                  <p class="text-xs text-gray-400 mt-1">
+                    Fall in love with 00's Bollywood like never...
+                  </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div
+                  class="w-44 bg-gray-800 rounded-lg p-2 hover:bg-gray-700 transition"
+                >
+                  <img
+                    class="rounded-md mb-2"
+                    src="https://i.scdn.co/image/ab67616d00001e0224464fde51a635b8f0d467d1"
+                    alt="All Out Hindi 90s"
+                  />
+                  <h3 class="text-sm font-semibold">All Out Hindi 90s</h3>
+                  <p class="text-xs text-gray-400 mt-1">
+                    K.K.K..Kiran to T.T.T..Tuffy, the...
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section class="mb-6 mr-3">
+              <div class="p-6">
+                <!-- Section Title -->
+                <div class="text-gray-400 text-center text-sm mb-4">
+                  For fans of Darshan Raval
+                </div>
+
+                <!-- Playlist Card -->
+                <div class="flex justify-center items-center">
+                  <div
+                    class="relative w-80 h-80 rounded-xl flex overflow-hidden group cursor-pointer"
+                  >
+                    <!-- Background Image -->
+                    <img
+                      src="https://i.scdn.co/image/ab6761610000e5ebec5ce29757466bc61716b06b"
+                      alt="Hot Hits Hindi"
+                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+
+                    <!-- Overlay -->
+                    <div
+                      class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"
+                    ></div>
+
+                    <!-- Playlist Content -->
+                    <div
+                      class="absolute bottom-4 left-4 flex items-center gap-4"
+                    >
+                      <!-- Thumbnail -->
+                      <img
+                        src="https://i.scdn.co/image/ab6761610000e5ebec5ce29757466bc61716b06b"
+                        class="w-16 h-16 rounded shadow-lg"
+                      />
+
+                      <!-- Text -->
+                      <div>
+                        <div class="text-white text-xl font-bold">
+                          Hot Hits Hindi
+                        </div>
+                        <div class="text-gray-300 text-sm">
+                          Playlist · Spotify
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+      <!-- last side of main container -->
+      <div class="flex-1 rounded-xl bg-[#121212]">
+        <div
+          class="flex-1 rounded-xl bg-[#121212] text-white font-sans p-4 space-y-4"
+        >
+          <!-- Song Header -->
+          <div class="space-y-2">
+            <!-- Album Image -->
+            <img
+              src="https://i.scdn.co/image/ab67616d0000b273eeb2de3c7773e8caa97f50bc"
+              alt="Toofan Album"
+              class="w-full h-auto rounded-lg"
+            />
+
+            <!-- Song Info -->
+            <div>
+              <div class="text-lg font-bold">Toofan</div>
+              <div class="text-sm text-gray-400 truncate">
+                Puneeth Rudranag, Varsh
+              </div>
+            </div>
+
+            <!-- Action Icons -->
+            <div class="flex items-center gap-4 mt-1">
+              <i
+                class="fas fa-share-alt text-gray-400 text-sm cursor-pointer"
+              ></i>
+              <i class="fas fa-plus text-gray-400 text-sm cursor-pointer"></i>
+            </div>
+          </div>
+
+          <div class="h-[56vh] overflow-y-auto">
+            <!-- Credits Section -->
+            <div class="bg-[#1e1e1e] rounded-xl p-3 space-y-2 mb-5 mr-3">
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-white font-semibold">Credits</span>
+                <span
+                  class="text-xs text-gray-400 hover:underline font-bold cursor-pointer"
+                  >Show all</span
+                >
+              </div>
+
+              <!-- Artist 1 -->
+              <div class="flex items-center justify-between mb-5">
+                <div>
+                  <div class="text-sm font-medium">Santhosh Venky</div>
+                  <div class="text-xs text-gray-400">Main Artist</div>
+                </div>
+                <button
+                  class="text-sm px-3 py-1 rounded-full border border-white hover:bg-white hover:text-black transition"
+                >
+                  Follow
+                </button>
+              </div>
+
+              <!-- Artist 2 -->
+              <div class="flex items-center justify-between mb-5">
+                <div>
+                  <div class="text-sm font-medium">Mohan Krishna</div>
+                  <div class="text-xs text-gray-400">Main Artist</div>
+                </div>
+                <button
+                  class="text-sm px-3 py-1 rounded-full border border-white hover:bg-white hover:text-black transition"
+                >
+                  Follow
+                </button>
+              </div>
+
+              <!-- Artist 3 -->
+              <div class="flex items-center justify-between mb-5">
+                <div>
+                  <div class="text-sm font-medium">Prajjal Dhar</div>
+                  <div class="text-xs text-gray-400">Mern Developer</div>
+                </div>
+                <button
+                  class="text-sm px-3 py-1 rounded-full border border-white hover:bg-white hover:text-black transition"
+                >
+                  Follow
+                </button>
+              </div>
+            </div>
+
+            <!-- about the artist -->
+
+            <div class="flex justify-center items-center mr-3">
+              <div
+                class="w-64 rounded-xl bg-[#1e1e1e] mb-8 text-white font-sans p-4 space-y-4"
+              >
+                <!-- Section Title -->
+                <div class="text-sm text-white font-semibold">
+                  About the artist
+                </div>
+
+                <!-- Artist Info -->
+                <div class="flex flex-col items-start gap-3">
+                  <!-- Artist Image -->
+                  <img
+                    src="https://i.scdn.co/image/ab67616d00001e02522f4f524b4603b85b6cd3c1"
+                    alt="Arijit Singh"
+                    class="w-16 h-16 rounded-full object-cover"
+                  />
+
+                  <!-- Name + Stats -->
+                  <div>
+                    <div class="text-base font-semibold">Arijit Singh</div>
+                    <div class="text-sm text-gray-400">
+                      45,932,644<br />monthly listeners
+                    </div>
+                  </div>
+
+                  <!-- Unfollow Button -->
+                  <button
+                    class="mt-1 px-4 py-1 text-sm border border-white rounded-full hover:bg-white hover:text-black transition"
+                  >
+                    Unfollow
+                  </button>
+
+                  <!-- Bio -->
+                  <p class="text-sm text-gray-300 leading-snug">
+                    Celebrating and sharing love for music with all of you.
+                    <br />
+                    <a
+                      href="https://www.instagram.com/arijitsingh"
+                      class="text-gray-400 hover:underline"
+                      >https://www.instagram.com/arijitsingh</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-[#1e1e1e] rounded-xl p-3 space-y-2 mb-5 mr-3">
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-white font-semibold"
+                  >Next in Queue</span
+                >
+                <span
+                  class="text-xs text-gray-400 hover:underline font-bold cursor-pointer"
+                  >Open Queue</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fixed bottom-0 w-full bg-black text-white py-3 z-50">
+      <div class="flex items-center justify-between">
+        <!-- Song Info -->
+        <div class="flex items-center space-x-3 w-1/4">
+          <img
+            src="https://i.scdn.co/image/ab67616d00001e02522f4f524b4603b85b6cd3c1"
+            alt="Album Art"
+            class="w-12 h-12 rounded-md"
+          />
+          <div>
+            <h4 class="text-sm font-semibold">Jeene Laga Hoon</h4>
+            <p class="text-xs text-gray-400">
+              Atif Aslam, Shreya Ghoshal, Sachin-Jigar
+            </p>
+          </div>
+        </div>
+
+        <!-- Controls + Seek Bar -->
+        <div class="flex flex-col items-center w-2/4">
+          <div class="flex items-center space-x-4 mb-1">
+            <button>
+              <i class="fa fa-fast-backward" aria-hidden="true"></i>
+            </button>
+            <button><i class="fa fa-play" aria-hidden="true"></i></button>
+            <button><i class="fa fa-forward" aria-hidden="true"></i></button>
+          </div>
+          <div class="flex items-center space-x-2 w-full px-4">
+            <span class="text-xs text-gray-400">3:09</span>
+            <div class="flex-1 h-1 bg-gray-600 rounded overflow-hidden">
+              <div class="bg-green-500 h-1 w-3/4 relative">
+                <div
+                  class="absolute right-0 -top-1 w-1/4 h-3 bg-white rounded-full shadow-md"
+                ></div>
+              </div>
+            </div>
+            <span class="text-xs text-gray-400">3:56</span>
+          </div>
+        </div>
+
+        <!-- Device Info -->
+        <div class="w-1/4 text-right text-sm text-green-500 pr-2">
+          <p>
+            🎧 Playing on <span class="font-semibold">Prajjal's Echo Dot</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </body>
+</html>
