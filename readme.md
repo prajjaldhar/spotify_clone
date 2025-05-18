@@ -33,7 +33,7 @@ The layout is completely mobile-friendly, featuring a modern navigation bar, res
 <img src="https://avatars.githubusercontent.com/u/64453189?v=4" width="100" height="100" alt="Prajjal's Photo" style="border-radius: 50%;" />
 
 **Prajjal Dhar**  
-💼 Senior Mern Stack Developer
-✉️ _Connect via [LinkedIn](https://www.linkedin.com/in/prajjaldhar/)_ (add your link)
+- 💼 Senior Mern Stack Developer
+- ✉️ Connect via [LinkedIn](https://www.linkedin.com/in/prajjaldhar/)_ 
 
 ---
